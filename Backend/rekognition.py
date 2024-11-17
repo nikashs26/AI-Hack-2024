@@ -2,6 +2,7 @@ import boto3
 from PIL import Image, ImageDraw
 import io
 import os
+import urllib.parse  # Add this for URL encoding
 
 # AWS Setup
 rekognition = boto3.client('rekognition')
@@ -21,9 +22,12 @@ def process_image_from_s3(image_name):
     Process an image stored in S3, detect cars, and return the car count and processed image.
     """
     try:
-        # Construct the full S3 key for the image, including the folder path
-        image_key = f"{image_base_path}{image_name}.jpg"  # e.g., parking_rois_gopro/images/<image_name>.jpg
+        # URL-encode the image name to handle spaces and special characters
+        encoded_image_name = urllib.parse.quote(image_name)
         
+        # Construct the full S3 key for the image, including the folder path
+        image_key = f"{image_base_path}{encoded_image_name}.jpg"  # e.g., parking_rois_gopro/images/<encoded_image_name>.jpg
+
         # Debugging: Print the full S3 key
         print(f"Attempting to fetch image from S3 with key: {image_key}")
 
