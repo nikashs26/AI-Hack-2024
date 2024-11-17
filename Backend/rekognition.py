@@ -43,7 +43,7 @@ def process_image_from_s3(image_name):
         detectLabelsResponse = rekognition.detect_labels(
             Image={'Bytes': image_data},
             MaxLabels=100,
-            MinConfidence=70
+            MinConfidence=50
         )
 
         car_count = 0
