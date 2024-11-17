@@ -34,7 +34,7 @@ def process_image(image_name):
         print(f"S3 Key: {decoded_image_name}.jpg")  # This should match the exact path in S3
 
         # Process the image by calling the process_image_from_s3 function
-        car_count, output_image_path = process_image_from_s3(decoded_image_name)
+        car_count, output_image_path, empty_spots = process_image_from_s3(decoded_image_name)
 
         # Save the processed image to the output folder
         output_image_name = os.path.basename(output_image_path)
@@ -46,7 +46,8 @@ def process_image(image_name):
         # Return the processed image path and car count
         return jsonify({
             "car_count": car_count,
-            "image_url": f"/uploads/{output_image_name}"
+            "image_url": f"/uploads/{output_image_name}",
+            "empty_spots": empty_spots
         })
     except Exception as e:
         print(f"Error: {str(e)}")  # Debug print for error

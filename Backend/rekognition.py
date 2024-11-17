@@ -43,7 +43,7 @@ def process_image_from_s3(image_name):
         detectLabelsResponse = rekognition.detect_labels(
             Image={'Bytes': image_data},
             MaxLabels=100,
-            MinConfidence=80
+            MinConfidence=70
         )
 
         car_count = 0
@@ -69,8 +69,19 @@ def process_image_from_s3(image_name):
         output_image_path = os.path.join(outputFolder, f"{image_name}_output_with_boxes.png")
         image.save(output_image_path)
 
+        
+        response = s3.get_object_tagging(
+            Bucket=bucketName,
+            Key=image_key
+        )
+
+        empty_spots = next((tag['Value'] for tag in response['TagSet'] if tag['Key'] == 'EmptySpots'), None)
         # Return the car count and the processed image path
-        return car_count, output_image_path
+
+        print ("Empty spots: " + empty_spots)
+        return car_count, output_image_path, empty_spots
+
+    
 
     except Exception as e:
         print(f"Error processing image from S3: {str(e)}")

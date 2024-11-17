@@ -5,6 +5,8 @@ function Page() {
     const title = useParams();
     const [carCount, setCarCount] = useState("");
     const [imageUrl, setImageUrl] = useState("");
+    const [emptySpots, setEmptySpots] = useState("");
+
 
     const requestOptions = {
         method: "GET",
@@ -18,14 +20,16 @@ function Page() {
         .then((result) => {
             setCarCount(result.car_count)
             setImageUrl(result.image_url)
+            setEmptySpots(result.empty_spots)
         })
         .catch((error) => console.error(error));
 
     return (
         <div>
             <h1>Results for {title.title}</h1>
-            <p>{carCount}</p>
-            <p>{imageUrl}</p>
+            <h3>car count</h3><p>{carCount}</p>
+            <h3>image url</h3><p>{imageUrl}</p>
+            <h3>emptySpots</h3><p>{emptySpots - carCount}</p>
         </div>
     )
 }
