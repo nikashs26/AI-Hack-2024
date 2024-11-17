@@ -107,7 +107,7 @@ summary
 {
     margin-left:15%;
     margin-right: 20%;
-    list-style: none;
+    list-style-type: none;
 }
 body section ul li
 {
@@ -167,6 +167,7 @@ body
 
     font-weight:100;    
     margin-top:-9rem;
+    margin-right: 0%;
     width: 45%;
     display: flex;
     justify-self: right;
@@ -190,7 +191,7 @@ body
 }
 #what-we-do-title
 {
-    margin-left:20%;
+    margin-left:0%;
     font-size:60px;
     margin-top:14rem;
     font-weight:300;  
