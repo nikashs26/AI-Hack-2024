@@ -1,10 +1,12 @@
 import os
 from flask import Flask, request, jsonify, send_from_directory
+from flask_cors import CORS
 from urllib.parse import unquote  # To URL-decode the image name
 from rekognition import process_image_from_s3  # Updated import for the new file name
 
 # Initialize Flask app
 app = Flask(__name__)
+CORS(app)
 
 # Configuration
 outputFolder = 'outputimages/'
@@ -56,4 +58,4 @@ def uploaded_file(filename):
     return send_from_directory(outputFolder, filename)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5001, debug=True)

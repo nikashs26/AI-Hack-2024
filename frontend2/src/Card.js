@@ -9,7 +9,7 @@ function Card({ title }) {
             {title}
         </summary>
         <div>
-            <a href={`/${title}`}> {title}</a>
+            <a href={`/page/${title}`}> {title}</a>
         </div> 
     </details>
     </div>
