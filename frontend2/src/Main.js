@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "./Card";
 import "./Main.css";
-import lot from '/Users/nikashshanbhag/Documents/GitHub/AI-Hack-2024/frontend2/src/assets/parking-lot.png';
+import lot from './assets/parking-lot.png';
 function HomePage()
 {
     return(
