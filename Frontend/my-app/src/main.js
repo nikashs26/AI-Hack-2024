@@ -1,12 +1,12 @@
 import React from "react";
+import Card from "./card";
 
 function HomePage()
 {
-    const {result, setDefault} = React.w
     return (
         <div>
             <h1>Hello World</h1>
-            <Card number = "7"/>
+            <Card title="Tilted Towers"/>
         </div>
     )
 }

@@ -1,13 +1,17 @@
 import React from "react";
 
-function Card(number)
-
-{
-    const add = (number) =>number * number;
-    ReadableStream.useEffect
+function Card(title) {
     return(
         <div>
-            <h2>Card {number}</h2>
+          <details>
+              <summary>
+                  {title}
+                  
+              </summary>
+              <div>
+                  <a href="/">{title}</a>
+              </div>
+          </details>
         </div>
     )
 }

@@ -1,9 +1,7 @@
-import './App.css';
-import { useEffect } from 'react';
-import axios from 'axios';
-import { BrowserRouter, Router, Route} from "react-router-dom";
-import Header from './components/Header';
+import { BrowserRouter, Routes, Route} from "react-router-dom";
+import "./App.css"
 import HomePage from "./main";
+
 function App() {
     return(
         <BrowserRouter>
