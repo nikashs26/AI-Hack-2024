@@ -112,12 +112,12 @@ rekognition = boto3.client('rekognition')
 s3 = boto3.client('s3')
 
 # S3 bucket that contains sample images and videos
-bucketName = "aws-rek-immersionday-" + awsRegion
+bucketName = "pklottest"
 
 # Create temporary directory
 tempFolder = 'm1tmp/'
 
-imageName = "media/object-detection/cars.png"
+imageName = "PKLot.v2-640.tensorflow/train/2012-09-11_15_16_58_jpg.rf.61d961a86c9a16694403dfcb72cd450c.jpg"
 
 # Display the image
 display(IImage(url=s3.generate_presigned_url('get_object', Params={'Bucket': bucketName, 'Key': imageName})))
