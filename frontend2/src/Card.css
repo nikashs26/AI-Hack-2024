@@ -31,7 +31,7 @@ body section ul li
 
 summary:hover 
 {
-    
+    margin-top:2rem;
     width:90vw;
     background-color: gray;
 }
@@ -41,7 +41,7 @@ details[open]>summary
     background-color: gray;
     color: white;
     width:90vw;
-
+    margin-top:-.07rem;
     box-shadow: 0 1rem 4rem -15px black;
     border-bottom: none;
     
@@ -51,7 +51,8 @@ details[open]>summary
 
 details[open]
 {
-    margin-top:1rem;
+   
+
     width:92vw;
     background-color: rgb(247, 242, 242);
 }
