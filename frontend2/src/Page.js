@@ -23,7 +23,7 @@ function Page() {
 
     return (
         <div>
-            <h1>Hello! {title.title}</h1>
+            <h1>Results for {title.title}</h1>
             <p>{carCount}</p>
             <p>{imageUrl}</p>
         </div>
