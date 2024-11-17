@@ -16,11 +16,11 @@ s3 = boto3.client('s3')
 bucketName = "actioncameradata"
 
 # Create temporary directory
-tempFolder = 'm1tmp/'
+tempFolder = 'outputimages/'
 if not os.path.exists(tempFolder):
     os.makedirs(tempFolder)
 
-imageName = "parking_rois_gopro/images/GOPR0103.JPG"
+imageName = "parking_rois_gopro/images/Retail Row.JPG"
 
 # Display the image
 display(IImage(url=s3.generate_presigned_url('get_object', Params={'Bucket': bucketName, 'Key': imageName})))
@@ -42,7 +42,7 @@ detectLabelsResponse = rekognition.detect_labels(
         }
     },
     MaxLabels=100,  # Optional: You can set MaxLabels to a higher value if you expect many objects
-    MinConfidence=50  # Optional: Adjust this value based on the confidence level you want
+    MinConfidence=80  # Optional: Adjust this value based on the confidence level you want
 )
 
 # Count the number of "Car" labels using bounding boxes (each bounding box corresponds to a car detected)
