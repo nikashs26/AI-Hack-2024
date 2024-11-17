@@ -1,0 +1,68 @@
+.card {
+    display: flex;
+    justify-content: left;
+    margin-left:3rem;
+    
+}
+summary
+{
+    background-color: lightgray;
+    margin-bottom: 0;
+    padding: 1rem;
+    font-size: 30px;
+    width: 100rem;
+    margin-top:.4rem;
+
+    
+}
+.parking-lot
+{
+    width:100%;
+}
+
+
+body section ul li
+{
+    
+    list-style-type: none;
+}
+
+
+
+summary:hover 
+{
+    
+    width:100%;
+    background-color: gray;
+}
+
+details[open]>summary
+{
+    background-color: gray;
+    color: white;
+    width:100%;
+
+    box-shadow: 0 1rem 4rem -15px black;
+    border-bottom: none;
+    
+}
+
+
+
+details[open]
+{
+    width:90%;
+    background-color: rgb(247, 242, 242);
+}
+details[open]>div
+{
+    margin-left: 1rem;
+    margin-top:1rem;
+    
+}
+
+details[open]>div>a
+{
+    font-size: 30px;
+}
+

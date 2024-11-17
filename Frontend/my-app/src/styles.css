@@ -56,6 +56,13 @@ header nav ul li a:hover {
     
 }
 
+
+
+.try-paragraph
+{
+    text-align: center;
+    font-size: 30px;
+}
 section form {
     display: flex;
     
@@ -105,6 +112,7 @@ summary
 
 #dropdown
 {
+    margin-top:3rem;
     margin-left:15%;
     margin-right: 20%;
     list-style-type: none;
