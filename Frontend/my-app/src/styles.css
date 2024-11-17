@@ -1,0 +1,202 @@
+.parking-lot
+{
+    width:100%;
+    height:auto;
+}
+
+h1
+{
+    
+    font-size: 80px;
+    text-align: center;
+    margin-top:2rem;
+    z-index:2;
+    color: black;
+    font-weight: 350;
+    z-index:1;
+}
+
+header {
+    font-family: 'Inter', sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5rem;
+    background-color: black;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 1;
+    width:100%;
+}
+
+
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: right;
+    margin-right:3rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem;
+    font-size: 20px;
+}
+
+header nav ul li a:hover {
+    background-color: #f8f8f8;
+    color: #343436;
+    
+    display: flex;
+    
+}
+
+section form {
+    display: flex;
+    
+}
+section form input[placeholder = "  Start typing an address..."]
+{
+    font-size: 25px;
+    margin-left: 20%;
+}
+
+section form input[type="search"] {
+    padding: 0.4rem;
+    border: none;
+    border-radius: 2rem;
+    margin-left: 20%;
+    margin-right:-2rem;
+    width:60%;
+    height:4rem;
+    
+    
+}
+
+#search-feature form button {
+    
+    background-color: white;
+    color: #888888;
+    border: none;
+    cursor: pointer;
+    padding: 0.4rem;
+    height:3.6rem;
+    margin-top:.2rem;
+    margin-left:-1rem;
+    
+}
+
+
+
+summary
+{
+    background-color: lightgray;
+    margin-bottom: 0;
+    padding: 1rem;
+    font-size: 30px;
+    width: 100%;
+    
+}
+
+#dropdown
+{
+    margin-left:15%;
+    margin-right: 20%;
+    list-style: none;
+}
+body section ul li
+{
+    
+    list-style-type: none;
+}
+
+
+
+summary:hover 
+{
+    width:100%;
+    background-color: gray;
+}
+
+details[open]>summary
+{
+    background-color: gray;
+    color: white;
+    width:100%;
+
+    box-shadow: 0 1rem 4rem -15px black;
+    border-bottom: none;
+    
+}
+
+
+
+details[open]
+{
+    
+    background-color: rgb(247, 242, 242);
+}
+details[open]>div
+{
+    margin-left: 1rem;
+    margin-top:1rem;
+    
+}
+
+details[open]>div>a
+{
+    font-size: 30px;
+}
+body
+{
+    font-family:system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: lightgray;
+    font-style: normal;
+    margin:0;
+    padding:0;
+}
+
+
+#what-we-do-paragraph
+{
+
+    font-weight:100;    
+    margin-top:-9rem;
+    width: 45%;
+    display: flex;
+    justify-self: right;
+    font-size:30px;
+    
+
+}
+
+#line-divider
+{
+    margin-top:-12rem;
+    display: flex;
+    justify-content: right;
+    position:absolute;
+    margin-left: 50%;
+    width: .03%; 
+    height: 30rem; 
+    background-color:gray;
+    
+    
+}
+#what-we-do-title
+{
+    margin-left:20%;
+    font-size:60px;
+    margin-top:14rem;
+    font-weight:300;  
+    min-width: 10%;  
+
+}
+
+
+
