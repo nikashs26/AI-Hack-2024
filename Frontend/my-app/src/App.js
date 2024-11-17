@@ -1,21 +1,19 @@
 import './App.css';
 import { useEffect } from 'react';
 import axios from 'axios';
-
+import { BrowserRouter, Router, Route} from "react-router-dom";
 import Header from './components/Header';
-
+import HomePage from "./main";
 function App() {
-  useEffect(() => {
-    axios.get('/').then(response => {
-        console.log(response.data);
-    });
-}, []);
-
-return (
-    <div>
-        <h1>Frontend and Backend Connected!</h1>
-    </div>
-);
+    return(
+        <BrowserRouter>
+            <Routes>
+                <Route path="/">
+                    <Route index element={<HomePage />} />
+                </Route>
+            </Routes>
+        </BrowserRouter>
+    )
 }
 
 export default App;
