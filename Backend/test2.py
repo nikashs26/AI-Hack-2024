@@ -20,7 +20,7 @@ tempFolder = 'm1tmp/'
 if not os.path.exists(tempFolder):
     os.makedirs(tempFolder)
 
-imageName = "parking_rois_gopro/images/Dirty Docks.JPG"
+imageName = "parking_rois_gopro/images/Fatal Fields.JPG"
 
 # Display the image
 display(IImage(url=s3.generate_presigned_url('get_object', Params={'Bucket': bucketName, 'Key': imageName})))
